@@ -31,17 +31,34 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
 .header-container {
   display: flex;
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid #e7e9fc;
 }
 
 .navigation,
@@ -62,7 +79,7 @@ img {
 
 .section {
   padding-top: 120px;
-    padding-bottom: 120px;
+  padding-bottom: 120px;
 }
 
 .section-element {
@@ -148,10 +165,6 @@ img {
   padding-bottom: 188px;
 }
 
-.hero-container {
-  text-align: center;
-}
-
 .hero-header {
   color: var(--WHITE, #fff);
   font-size: 56px;
@@ -160,12 +173,13 @@ img {
   letter-spacing: 1.12px;
   text-align: center;
   margin-bottom: 48px;
-  width: 496px;
+  max-width: 496px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero-button {
+  display: block;
   color: var(--WHITE, #fff);
   font-size: 16px;
   font-style: normal;
@@ -176,6 +190,11 @@ img {
   cursor: pointer;
   padding: 16px 32px;
   border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-button:hover,
@@ -213,11 +232,13 @@ img {
 .our-team-card {
   background: var(--WHITE, #fff);
   width: calc((100% - 24px * 3) / 4);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .card {
   padding-top: 32px;
   padding-bottom: 32px;
+  text-align: center;
 }
 
 .section-header {
@@ -261,8 +282,7 @@ img {
 }
 
 .portfolio-card {
-  padding-top: 32px;
-  padding-bottom: 32px;
+ padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
@@ -276,6 +296,7 @@ img {
 }
 
 .footer-logo {
+  display: inline-block;
   color: var(--IRIS, #4d5ae5);
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
